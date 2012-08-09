@@ -1,1 +1,15 @@
-foo
+
+
+<form method='post' action="<%= @request.path %>">
+
+
+<%if @request.query['first_name'] && !@request.query['first_name'].empty?%>
+<%="Hello there #{@request.query['first_name']}" %>
+
+<% else %>
+Enter your Name
+<%end%>
+
+First name: <input type="text" name="first_name" placeholder='first name'/><br />
+        <input type="submit" value="Submit" />
+    </form>

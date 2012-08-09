@@ -21,6 +21,8 @@ Dir['views/*.html.erb'].each do |file|
   layout_string   = File.open('views/layouts/application.html.erb', 'r').read
 
   puts "  - Converting .html.erb to html with Layout !!!"
+  
+
   contents_with_layout = process_erb(layout_string) {main_contents}
 
   puts "  - Writing #{output_file}"
